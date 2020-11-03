@@ -9,7 +9,7 @@ public class TestComercio {
 	@Test
 	public void testQueDevuelveLaCantidadDeProductosActuales() {
 
-		EmpleadoRepositor empr1= new EmpleadosRepositor ()
+		EmpleadoRepositor empr1= new EmpleadosRepositor (10, "Juan", )
 	}
 
 }
