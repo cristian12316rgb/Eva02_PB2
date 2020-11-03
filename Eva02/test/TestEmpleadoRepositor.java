@@ -15,6 +15,7 @@ public class TestEmpleadoRepositor {
         empr.agregarProductoNuevo(productoDOs);
         empr.agregarProductoNuevo(productosTres);
 
+        /*solucion*/
         assertEquals(3, empr.getStockActual());
 
     }
