@@ -7,8 +7,9 @@ import org.junit.Test;
 public class TestComercio {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testQueDevuelveLaCantidadDeProductosActuales() {
+
+		EmpleadoRepositor empr1= new EmpleadosRepositor ()
 	}
 
 }
