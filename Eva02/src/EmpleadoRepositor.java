@@ -29,14 +29,14 @@ public class EmpleadoRepositor extends Empleado {
             productoArrayList.add(productoAAgregar);
         }
     }
-    /*Está mal*/
+    /*Está mal?*/
     public Producto obtenerProductosLivianos(){
         for (Producto x:productoArrayList) {
             if(producto.getPeso()<1000){
                 return producto;
             }
         }
-        return producto;
+        return null;
     }
 
 
