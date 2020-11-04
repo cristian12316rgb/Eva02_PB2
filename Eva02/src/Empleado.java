@@ -3,9 +3,8 @@ public class Empleado{
     private Integer nroEmpleado;
     private String nombre;
     private Double sueldo;
-    /*Como usariamos las horasDeTrabajo?*/
-    private Integer horasDeTrabajo;
-    private Integer fechaDeIngreso;
+    private Integer horasDeTrabajo; //PROPONGO BORRARLO
+    private Integer fechaDeIngreso; //PROPONGO BORRARLO
 
     public Empleado (Integer nroDeEmpleado, String nombre, Double sueldo, Integer fechaDeIngreso){
         this.nroEmpleado=nroDeEmpleado;

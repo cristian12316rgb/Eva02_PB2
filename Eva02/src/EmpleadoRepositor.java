@@ -2,43 +2,59 @@ import java.util.ArrayList;
 
 public class EmpleadoRepositor extends Empleado {
 
-    private Integer stockActual;
-    ArrayList<Producto> productoArrayList= new ArrayList<Producto>();
-    private Producto producto;
 
-    public EmpleadoRepositor(Integer nroDeEmpleado, String nombre, Double sueldo, Integer fechaDeIngreso) {
-        super(nroDeEmpleado, nombre, sueldo, fechaDeIngreso);
-    }
-
-    /*Hay que revisar todos los metodos*/
-
-    public Integer getStockActual(){
-        for (Producto x:productoArrayList) {
-            return productoArrayList.size();
-        }
-        return productoArrayList.size();
-    }
-    public void agregarProductoNuevo(Producto producto){
-        for (Producto x:productoArrayList) {
-            productoArrayList.add(producto);
-        }
-    }
-    public void modificarUnProductoDeLaLista(Producto productoACambiar,Producto productoAAgregar){
-        for (Producto x:productoArrayList) {
-            productoArrayList.remove(productoACambiar);
-            productoArrayList.add(productoAAgregar);
-        }
-    }
-    /*EstÃ¡ mal?*/
-    public Producto obtenerProductosLivianos(){
-        for (Producto x:productoArrayList) {
-            if(producto.getPeso()<1000){
-                return producto;
-            }
-        }
-        return null;
-    }
+	ArrayList<Producto> productoArrayList = new ArrayList<Producto>();
 
 
+	public EmpleadoRepositor(Integer nroDeEmpleado, String nombre, Double sueldo, Integer fechaDeIngreso) {
+		super(nroDeEmpleado, nombre, sueldo, fechaDeIngreso);
+
+	}
+
+	public Integer getStockActual() { // este metodo devuelve un Integer con el tamaño del arrayList.
+		return productoArrayList.size();
+
+	}
+
+	public void agregarProductoNuevo(Producto producto) {
+		productoArrayList.add(producto);
+
+	}
+
+	public boolean modificarUnProductoDeLaLista(Producto productoACambiar, Producto productoAAgregar) {
+		for (int i = 0; i < productoArrayList.size(); i++) { // recorre la lista
+			if (productoArrayList.get(i).equals(productoACambiar)) { // si encuentra ese producto con el mismo codigo
+				productoArrayList.set(i, productoAAgregar); // cambia el producto de esa posicion por el nuevo.
+				return true;
+			}
+		}
+		return false;
+
+	}
+
+	// agrego el metodo eliminar producto.
+
+	public boolean eliminarUnProductoDeLaLista(Producto productoAEliminar) {
+		for (int i = 0 ; i < productoArrayList.size() ; i++) {
+			if (productoArrayList.get(i).equals(productoAEliminar)) {
+				productoArrayList.remove(i);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public ArrayList<Producto> obtenerProductosLivianos() { // devuelve una lista de productos livianos.
+
+		ArrayList<Producto> productosLivianos = new ArrayList<Producto>(); // creo la nueva lista
+		for (Producto producto : productoArrayList) {
+			if (producto.getPeso() < 1000) { // si el producto pesa menos de 1000grs.
+				productosLivianos.add(producto);
+
+			}
+		}
+
+		return productosLivianos;
+	}
 
 }
