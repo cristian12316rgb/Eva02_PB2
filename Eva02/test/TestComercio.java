@@ -34,5 +34,17 @@ public class TestComercio {
 		
 		
 	}
+	@Test
+	public void testQueMeDevuelvaLaCantidadCorrectaDeProductos(){
+
+		Producto producto1 = new Producto (200.0,"bateria",1500.0);
+		Producto producto2 = new Producto (150.0,"lampara",600.0);
+		Producto producto3 = new Producto (80.0,"cosa",1100.0);
+		Producto producto4 = new Producto (5.0,"maouse",200.0);
+		Producto producto5 = new Producto (250.0,"bateria",2000.0);
+
+
+
+	}
 
 }
