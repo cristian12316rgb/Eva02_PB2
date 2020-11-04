@@ -6,6 +6,10 @@ public class Empleado{
     private Integer horasDeTrabajo; //PROPONGO BORRARLO
     private Integer fechaDeIngreso; //PROPONGO BORRARLO
 
+    /*
+    la fecha de ingreso para no complicarnos yo digo de expresarla asi: aaaammdd
+    ej: 20200101
+     */
     public Empleado (Integer nroDeEmpleado, String nombre, Double sueldo, Integer fechaDeIngreso){
         this.nroEmpleado=nroDeEmpleado;
         this.nombre=nombre;
